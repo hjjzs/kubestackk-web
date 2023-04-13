@@ -48,7 +48,7 @@
       //连接
       connectVnc() {
         const PASSWORD = ''//VNC Server 密码
-        const ws_proxy_host = "127.0.0.1"
+        const ws_proxy_host = "10.255.9.184"
         const ws_proxy_port = ":9696"
         const route = useRoute()
         const url = 'ws://' + ws_proxy_host + ws_proxy_port +'/apis/subresources.kubevirt.io/v1/namespaces/' + route.query.namespace + '/virtualmachineinstances/' + route.query.name + '/vnc?token=' + this.token
@@ -62,7 +62,7 @@
         this.rfb.resizeSession = false //是一个boolean指示是否每当容器改变尺寸应被发送到调整远程会话的请求。默认情况下禁用
         // console.log(this.rfb)
       },
-   
+   \\
       status(text) {
         document.getElementById('status').textContent = text
       },
